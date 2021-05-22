@@ -21,7 +21,7 @@ cust_password VARCHAR(112)
 
 CREATE TABLE seats (
 seat_id  INT PRIMARY KEY AUTO_INCREMENT,
-seat_row  INT(5),
+seat_row  INT,
 seat_reserved  BOOLEAN DEFAULT false,
 
 );
