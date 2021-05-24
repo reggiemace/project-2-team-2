@@ -1,0 +1,47 @@
+[
+    {
+        "movie_name": "Wizard of Oz",
+        "show_day": "2021-10-10",
+        "movie-type": "fantasy"
+    },
+    {
+        "movie_name": "Charlie and the Chocolate Factory",
+        "show_day": "2021-10-11",
+        "movie-type": "fantasy"
+    },
+    {
+        "movie_name": "Home Alone",
+        "show_day": "2021-10-12",
+        "movie-type": "holiday"
+    },
+    {
+        "movie_name": "Titanic",
+        "show_day": "2021-10-13",
+        "movie-type": "romance"
+    },
+    {
+        "movie_name": "Notebook",
+        "show_day": "2021-10-14",
+        "movie-type": "fantasy"
+    },
+    {
+        "movie_name": "Jaws",
+        "show_day": "2021-10-15",
+        "movie-type": "suspense"
+    },
+    {
+        "movie_name": "Rocky",
+        "show_day": "2021-10-16",
+        "movie-type": "action"
+    },
+    {
+        "movie_name": "Superman",
+        "show_day": "2021-10-17",
+        "movie-type": "action"
+    },
+    {
+        "movie_name": "Rush Hour",
+        "show_day": "2021-10-18",
+        "movie-type": "comedy"
+    }
+]
