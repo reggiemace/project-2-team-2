@@ -5,19 +5,13 @@ class Customer extends Model {}
 
 Customer.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    first_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    last_name: {
-      type: DataTypes.STRING,
-    },
+  first_name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  last_name: {
+    type: DataTypes.STRING,
+  },
     
    email: {
       type: DataTypes.STRING,
@@ -28,6 +22,13 @@ Customer.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
    
   },
   {
@@ -35,7 +36,7 @@ Customer.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "customers",
+    modelName: "customer",
   }
 );
 
