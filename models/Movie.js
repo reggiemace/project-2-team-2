@@ -24,6 +24,13 @@ Movie.init(
    selected_seats: {
      type: DataTypes.INTEGER
    },
+   customer_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'customer',
+      key: 'id',
+    },
+  },
    
   },
   {

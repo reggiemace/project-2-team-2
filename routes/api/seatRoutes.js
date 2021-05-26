@@ -1,20 +1,20 @@
-const router = require("express").Router();
+// const router = require("express").Router();
 
-const Seat = require('../../models/Seats')
+// const Seat = require('../../models/Seat')
 
-console.log('in seat routes file')
-router.post('/', (req, res) => {
-  Seat.create({
-    seat_row: req.body.seat_row,
+// console.log('in seat routes file')
+// router.post('/', (req, res) => {
+//   Seat.create({
+//     seat_row: req.body.seat_row,
   
-  })
-    .then((newSeat) => {
-      res.json(newSeat);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
-});
+//   })
+//     .then((newSeat) => {
+//       res.json(newSeat);
+//     })
+//     .catch((err) => {
+//       res.json(err);
+//     });
+// });
 
 // router.post('/', async (req, res) => {
 //   try {
@@ -29,24 +29,24 @@ router.post('/', (req, res) => {
 //   }
 // });
 
-router.delete('/:id', async (req, res) => {
-  try {
-    const CustomerData = await Customer.destroy({
-      where: {
-        id: req.params.id,
-        id: req.session.id,
-      },
-    });
+// router.delete('/:id', async (req, res) => {
+//   try {
+//     const CustomerData = await Customer.destroy({
+//       where: {
+//         id: req.params.id,
+//         id: req.session.id,
+//       },
+//     });
 
-    if (!CustomerData) {
-      res.status(404).json({ message: 'No customer found with this id!' });
-      return;
-    }
+//     if (!CustomerData) {
+//       res.status(404).json({ message: 'No customer found with this id!' });
+//       return;
+//     }
 
-    res.status(200).json(CustomerData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.status(200).json(CustomerData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-module.exports = router;
+// module.exports = router;

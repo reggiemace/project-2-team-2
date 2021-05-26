@@ -1,11 +1,11 @@
 const router = require("express").Router();
 //const Customer = require("../../models/Customer");
 // Import the model
-const Movie = require('../../models/Movies')
+const Movie = require("../../models/Movie");
 
-console.log('in movie routes file')
-router.post('/', (req, res) => {
-  Movies.create({
+console.log("in movie routes file");
+router.post("/", (req, res) => {
+  Movie.create({
     movie_id: req.body.movie_id,
     movie_name: req.body.movie_name,
     show_day: req.body.show_day,
@@ -18,38 +18,34 @@ router.post('/', (req, res) => {
       res.json(err);
     });
 });
-
-// router.post('/', async (req, res) => {
-//   try {
-//     const newCustomer = await Customer.create({
-//       ...req.body,
-//       customer_id: req.session.customer_id,
-//     });
-
-//     res.status(200).json(newCustomer);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const CustomerData = await Customer.destroy({
-//       where: {
-//         id: req.params.id,
-//         customer_id: req.session.customer_id,
-//       },
-//     });
-
-//     if (!CustomerData) {
-//       res.status(404).json({ message: 'No customer found with this id!' });
-//       return;
-//     }
-
-//     res.status(200).json(CustomerData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
+router.get("/", async (req, res) => {
+  try {
+    const movieData = await Movie.findAll({});
+    if (!movieData) {
+      res.status(404).json({ message: "No movie with that id!" });
+      return;
+    }
+    res.status(200).json(movieData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+router.get("/:id", async (req, res) => {
+  try {
+    const movieData = await Movie.findByPk(req.params.id);
+    if (!movieData) {
+      res.status(404).json({ message: "No user with that id!" });
+      return;
+    }
+    res.status(200).json(movieData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+router.get("/id:", async (res, req) => {
+  const count = await Movie.count({});
+  //console.log(count);
+});
 module.exports = router;
