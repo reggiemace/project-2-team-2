@@ -22,13 +22,7 @@ Customer.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    movie_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
+    
    
   },
   {
