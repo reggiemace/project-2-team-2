@@ -1,5 +1,5 @@
 const sequelize = require("../config/connection");
-const { Customer} = require("../models");
+const { Customer, Movie} = require("../models");
 
 const customerSeedData = require("./customerData.json");
 const seatSeedData = require("./seatData.json");
@@ -21,6 +21,8 @@ const seedDatabase = async () => {
   // }
   // await Movies.bulkCreate(movieSeedData);
   await Customer.bulkCreate(customerSeedData);
+  await Movie.bulkCreate(movieSeedData);
+
   // await Seats.bulkCreate(seatSeedData);
 
   console.log("All seeds planted");
