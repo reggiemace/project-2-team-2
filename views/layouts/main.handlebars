@@ -22,19 +22,16 @@
   </head>
 
   <body>
-    <header>
-      <p>Movies</p>
-      <nav>
-        <a href="/">Home</a>
-        {{! If the user is logged in sho logout }}
-        {{#if loggedIn}}
-          <button id="logout" class="btn-no-style">Logout</button>
-        {{else}}
-          <!-- Otherwise, show a link to login -->
-          <a href="/login">Login</a>
-        {{/if}}
-      </nav>
-    </header>
+    <nav class="navbar">
+    <span class="navbar-text"><a href="/">Movies</a></span>
+    {{! If the user is logged in show logout }}
+    {{#if loggedIn}}
+      <button id="logout" class="btn btn-outline-info" type="button">Logout</button>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+      <button id="login" class="btn btn-outline-info" type="button">Login</button>
+    {{/if}}
+  </nav>
 
     <main>
 
