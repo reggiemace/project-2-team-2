@@ -1,8 +1,9 @@
 const router = require("express").Router();
 //const Customer = require("../../models/Customer");
 // Import the model
-const Movie = require("../../models/Movie");
+const Movie = require("../../../models/Movie");
 
+// Routes not using handlebars
 console.log("in movie routes file");
 router.post("/", (req, res) => {
   Movie.create({
@@ -44,6 +45,22 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Routes using handlebars
+// Get all movies
+router.get("/", async (req, res) => {
+  try {
+    const movieData = await Movie.findAll({});
+    console.log(movieData);
+    const dbMovies = movieData.map((movie) => movie.get({ plain: true }));
+    console.log(dbMovies);
+    res.render("homepage", { dbMovies, });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get("/id:", async (res, req) => {
   const count = await Movie.count({});
   //console.log(count);
