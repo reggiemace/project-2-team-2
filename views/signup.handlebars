@@ -1,23 +1,44 @@
 <h3 class="reservationhdr" style="margin-bottom: 0;">Create Account</h3>
 <h6>to reserve a seat</h6>
-<form>
-    <div class="row">
-        <div class="col">
-        <label for="firstName" class="col-form-label">First Name</label>
-        <input type="text" class="form-control" id="firstName" placeholder="First name">
-        </div>
-        <div class="col">
-        <label for="lastName" class="col-form-label">Last Name</label>
-        <input type="text" class="form-control" id="lastName" placeholder="Last name">
-        </div>
+<form class="signup-form">
+  <div class="row">
+    <div class="col">
+      <label for="firstName" class="col-form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        placeholder="First name"
+      />
     </div>
-    <div class="form-group">
-        <label for="reserveEmail" class="col-form-label">Email</label>
-        <input type="email" class="form-control" id="reserveEmail" aria-describedby="emailHelp" placeholder="Email Address">
+    <div class="col">
+      <label for="lastName" class="col-form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        placeholder="Last name"
+      />
     </div>
-    <div class="form-group">
+  </div>
+  <div class="form-group">
+    <label for="reserveEmail" class="col-form-label">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="reserveEmail"
+      aria-describedby="emailHelp"
+      placeholder="Email Address"
+    />
+  </div>
+  <div class="form-group">
     <label for="customerPassword" class="col-form-label">Password</label>
-    <input type="password" class="form-control" id="customerPassword" placeholder="Password">
-</div>
-    <button type="submit" class="btn btn-info">Create Account</button>
+    <input
+      type="password"
+      class="form-control"
+      id="customerPassword"
+      placeholder="Password"
+    />
+  </div>
+  <button type="submit" class="btn btn-info">Create Account</button>
 </form>
