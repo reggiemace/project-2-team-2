@@ -100,8 +100,9 @@ h1, h2, h3, h4, h5, h6 {
   h5 {
     color: #5f8091;
     font-size: 1.25em;
-    line-height: 1.35em;
+    line-height: 1.25em;
     margin: .35em auto .25em;
+    padding: 0 .25em;
   }
   
   h6 {
@@ -123,11 +124,11 @@ h1, h2, h3, h4, h5, h6 {
   .upcomingMovies {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     margin: .5em auto;
     width: 100%;
+    vertical-align: top;
   }
   
   .movieCards {
@@ -144,4 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .leftAlign {
     text-align: left;
+  }
+
+  .whiteCol {
+    color: #FFF;
   }
