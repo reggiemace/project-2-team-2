@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../public/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <style>
 
     </style>
@@ -23,15 +23,23 @@
 
   <body>
     <nav class="navbar">
-    <span class="navbar-text"><a href="/">Movies</a></span>
-    {{! If the user is logged in show logout }}
-    {{#if loggedIn}}
-      <button id="logout" class="btn btn-outline-info" type="button">Logout</button>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-      <button id="login" class="btn btn-outline-info" type="button">Login</button>
-    {{/if}}
-  </nav>
+      <span class="navbar-text"><a href="/">Movies</a></span>
+      {{! If the user is logged in show logout }}
+      {{#if loggedIn}}
+        <button
+          id="logout"
+          class="btn btn-outline-info"
+          type="button"
+        >Logout</button>
+      {{else}}
+        <!-- Otherwise, show a link to login -->
+        <button
+          id="login"
+          class="btn btn-outline-info"
+          type="button"
+        >Login</button>
+      {{/if}}
+    </nav>
 
     <main>
 
