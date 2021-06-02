@@ -2,6 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require('bcrypt');
 
+<<<<<<< HEAD
 
 class Customer extends Model {
   checkPassword(loginPw) {
@@ -9,17 +10,21 @@ class Customer extends Model {
   }
 }
 
+=======
+class Customer extends Model {}
+>>>>>>> Connect homepage/login page to DB
 Customer.init(
+  
   {
-  first_name: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  last_name: {
-    type: DataTypes.STRING,
-  },
-    
-   email: {
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+    },
+
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: DataTypes.NOW,
@@ -28,8 +33,14 @@ Customer.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
-   
+    // movie_id: {
+    //   type: DataTypes.INTEGER, autoIncrement: true,
+    //   primaryKey: true,
+    //   references: {
+    //     model: "movie",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     hooks: {
@@ -49,5 +60,7 @@ Customer.init(
     modelName: "customer",
   }
 );
+module.exports = Customer
 
-module.exports = Customer;
+
+

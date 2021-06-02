@@ -3,54 +3,43 @@
         "movie_name": "Wizard of Oz",
         "show_time": "2021-10-10",
         "total_seats": 50,
-        "selected_seats": 0 
-    },
-    {
-        "movie_name": "Charlie and the Chocolate Factory",
-        "show_time": "2021-10-11",
-        "total_seats": 50,
-        "selected_seats": 0 
-    },
-    {
-        "movie_name": "Home Alone",
-        "show-time": "2021-10-12",
-        "total_seats": 50,
-        "selected_seats": 0 
+        "selected_seats": 0,
+        "filename": "wizard-of-oz.jpg"
     },
     {
         "movie_name": "Titanic",
         "show-time": "2021-10-13",
         "total_seats": 50,
-        "selected_seats": 0 
-    },
+        "selected_seats": 0,
+        "filename": "titanic.jpg"
+     },
     {
         "movie_name": "Notebook",
         "show-time": "2021-10-14",
         "total_seats": 50,
-        "selected_seats": 0 
-    },
+        "selected_seats": 0,
+        "filename":  "notebook.jpg"
+     },
     {
         "movie_name": "Jaws",
         "show-time": "2021-10-15",
         "total_seats": 50,
-        "selected_seats": 0 
-    },
-    {
-        "movie_name": "Rocky",
-        "show_day": "2021-10-16",
+        "selected_seats": 0,
+        "filename":  "jaws.jpg"
+     },
+    
+      {
+        "movie_name": "Rush Hour",
+        "show_day": "2021-10-18",
         "total_seats": 50,
-        "selected_seats": 0 
-    },
-    {
-        "movie_name": "Superman",
-        "show_day": "2021-10-17",
-        "total_seats": 50,
-        "selected_seats": 0 
+        "selected_seats": 0,
+        "filename":  "rush-hour.jpg" 
     },
     {
         "movie_name": "Rush Hour",
         "show_day": "2021-10-18",
         "total_seats": 50,
-        "selected_seats": 0 
+        "selected_seats": 0,
+        "filename":  "rush-hour.jpg" 
     }
 ]

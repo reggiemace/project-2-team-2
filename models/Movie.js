@@ -16,22 +16,25 @@ Movie.init(
       allowNull: false,
     },
     show_time: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     total_seats: {
       type: DataTypes.INTEGER,
     },
-   selected_seats: {
-     type: DataTypes.INTEGER
-   },
-   customer_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: 'customer',
-      key: 'id',
+    selected_seats: {
+      type: DataTypes.INTEGER,
     },
-  },
-   
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    // customer_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "movie",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,

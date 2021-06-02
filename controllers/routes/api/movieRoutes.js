@@ -65,4 +65,6 @@ router.get("/id:", async (res, req) => {
   const count = await Movie.count({});
   //console.log(count);
 });
+
+
 module.exports = router;
