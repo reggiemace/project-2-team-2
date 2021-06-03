@@ -5,14 +5,6 @@ const router = require("express").Router();
 const { Customer, Movie } = require("../../../models");
 
 console.log("in cust routes file");
-router.post("/", async (req, res) => {
-  try {
-    const dbCustomerData = Customer.create({
-      first_name: req.body.firstName,
-      last_name: req.body.lasName,
-      email: req.body.email,
-      password: req.body.password,
-    });
 
 // Create one Customer
 router.get("/", async (req, res) => {
@@ -179,6 +171,7 @@ router.get("/homepage", async (req, res) => {
     res.status(500).json(err);
   }
 });
+  
 
 module.exports = router;
 // Logout
