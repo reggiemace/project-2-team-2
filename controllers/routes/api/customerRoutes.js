@@ -56,8 +56,8 @@ router.get("/signup", async (req, res) => {
   router.post("/", async (req, res) => {
     try {
       const dbCustomerData = Customer.create({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
+        first_name: req.body.firstName,
+        last_name: req.body.lastName,
         email: req.body.email,
         password: req.body.password,
       });
