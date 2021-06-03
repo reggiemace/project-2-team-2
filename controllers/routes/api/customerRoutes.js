@@ -8,8 +8,8 @@ console.log("in cust routes file");
 router.post("/", async (req, res) => {
   try {
     const dbCustomerData = Customer.create({
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+      first_name: req.body.firstName,
+      last_name: req.body.lasName,
       email: req.body.email,
       password: req.body.password,
     });

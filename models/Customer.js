@@ -2,7 +2,6 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require('bcrypt');
 
-<<<<<<< HEAD
 
 class Customer extends Model {
   checkPassword(loginPw) {
@@ -10,9 +9,6 @@ class Customer extends Model {
   }
 }
 
-=======
-class Customer extends Model {}
->>>>>>> Connect homepage/login page to DB
 Customer.init(
   
   {
