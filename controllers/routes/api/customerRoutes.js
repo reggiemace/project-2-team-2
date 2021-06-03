@@ -67,8 +67,8 @@ router.get("/signup", async (req, res) => {
   });
 });
 
-  res.render("confirmation");
-});
+
+
 router.get("/seatReservation", async (req, res) => {
   res.render("seatReservation");
 });
