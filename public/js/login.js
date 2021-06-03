@@ -23,10 +23,11 @@ const loginFormHandler = async (event) => {
   }
 };
 
-
 document
   .querySelector(".login-form")
   .addEventListener("submit", loginFormHandler);
+
+
 
 document.querySelector("#create").addEventListener("click", () => {
   document.location.replace("/api/customer/signup");

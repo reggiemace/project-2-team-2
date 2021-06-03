@@ -39,7 +39,5 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(`Now listening on http://localhost:${PORT}`)
   );
-  // app.get("/", (req, res) => {
-  //   res.sendFile("index.html");
-  // });
+  
 });
