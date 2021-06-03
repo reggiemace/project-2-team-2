@@ -8,21 +8,12 @@ console.log("in cust routes file");
 router.post("/", async (req, res) => {
   try {
     const dbCustomerData = Customer.create({
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+      first_name: req.body.firstName,
+      last_name: req.body.lasName,
       email: req.body.email,
       password: req.body.password,
     });
 
-    // Save session with logged in variable
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.status(200).json(dbCustomerData);
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 // Create one Customer
 router.get("/", async (req, res) => {
   try {
@@ -43,6 +34,47 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 router.get("/confirmation", async (req, res) => {
+
+  
+  try {
+    const movieData = await Movie.findAll({});
+    console.log(movieData);
+    const dbMovies = movieData.map((movie) => movie.get({ plain: true }));
+    console.log(dbMovies);
+    res.render("confirmation", { dbMovies });
+  } catch (err) {
+    console.log(
+      err + "_____________________________________________________________"
+    );
+    res.status(500).json(err);
+  }
+});
+router.get("/seatReservation", async (req, res) => {
+  res.render("seatReservation");
+});
+router.get("/signup", async (req, res) => {
+  res.render("signup");
+  console.log("in cust routes file");
+  router.post("/", async (req, res) => {
+    try {
+      const dbCustomerData = Customer.create({
+        first_name: req.body.firstName,
+        last_name: req.body.lastName,
+        email: req.body.email,
+        password: req.body.password,
+      });
+
+      // Save session with logged in variable
+      req.session.save(() => {
+        req.session.loggedIn = true;
+        res.status(200).json(dbCustomerData);
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+});
+
   res.render("confirmation");
 });
 router.get("/seatReservation", async (req, res) => {
@@ -71,13 +103,17 @@ router.get("/signup", async (req, res) => {
   });
 });
 
+
 //Create
 router.post("/", async (req, res) => {
   console.log("_________________________________");
   try {
     const dbCustomerData = Customer.create({
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
+
+      first_name: req.body.firstName,
+      last_name: req.body.lastName,
+
+
       email: req.body.email,
       password: req.body.password,
     });
