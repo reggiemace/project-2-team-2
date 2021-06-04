@@ -1,3 +1,16 @@
+// const reserveBtn = document.getElementById('submitReservation');
+
+// reserveBtn.addEventListener("click", function() {
+//   event.preventDefault();
+//   getParams();
+// });
+
+// function getParams() {
+//   var searchParamArr = document.location.search.split('?');
+//   var movieId = searchParamArr[1];
+//   console.log(movieId);
+// }
+
 const reservationFormHandler = async (event) => {
   event.preventDefault();
   console.log("reserved");
@@ -27,3 +40,6 @@ const reservationFormHandler = async (event) => {
 document
   .querySelector("#reserved")
   .addEventListener("submit", reservationFormHandler);
+
+
+  
