@@ -3,13 +3,16 @@ const notebookBtn = document.getElementById('notebookMovie');
 const ozBtn = document.getElementById('wizardOzMovie');
 
 jawsBtn.addEventListener("click", function() {
-    document.location.assign('seatReservation');
+    const id = event.target.getAttribute('data-id');
+    document.location.assign('seatReservation' + `?${id}`);
 });
 
 notebookBtn.addEventListener("click", function() {
-    document.location.assign('seatReservation');
+    const id = event.target.getAttribute('data-id');
+    document.location.assign('seatReservation' + `?${id}`);
 });
 
 ozBtn.addEventListener("click", function() {
-    document.location.assign('seatReservation');
+    const id = event.target.getAttribute('data-id');
+    document.location.assign('seatReservation' + `?${id}`);
 });
