@@ -5,7 +5,7 @@ class Movie extends Model {}
 
 Movie.init(
   {
-    id: {
+    movie_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -31,8 +31,8 @@ Movie.init(
     // customer_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
-    //     model: "movie",
-    //     key: "id",
+    //     model: "customer",
+    //     key: "customer_id",
     //   },
     // },
   },

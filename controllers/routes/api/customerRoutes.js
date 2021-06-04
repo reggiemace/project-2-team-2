@@ -26,14 +26,15 @@ router.get("/login", async (req, res) => {
   res.render("login");
 });
 router.get("/confirmation", async (req, res) => {
-
-  
   try {
     const movieData = await Movie.findAll({});
     console.log(movieData);
+    
     const dbMovies = movieData.map((movie) => movie.get({ plain: true }));
-    console.log(dbMovies);
-    res.render("confirmation", { dbMovies });
+    console.log(
+      "_________________________Yes Yes____________________________________"
+    );
+    res.render("confirmation", { ...dbMovies });
   } catch (err) {
     console.log(
       err + "_____________________________________________________________"
@@ -67,49 +68,26 @@ router.get("/signup", async (req, res) => {
   });
 });
 
-
-
 router.get("/seatReservation", async (req, res) => {
   res.render("seatReservation");
 });
 router.get("/signup", async (req, res) => {
   res.render("signup");
   console.log("in cust routes file");
-  router.post("/", async (req, res) => {
-    try {
-      const dbCustomerData = Customer.create({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        password: req.body.password,
-      });
-
-      // Save session with logged in variable
-      req.session.save(() => {
-        req.session.loggedIn = true;
-        res.status(200).json(dbCustomerData);
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
 });
-
 
 //Create
 router.post("/", async (req, res) => {
   console.log("_________________________________");
   try {
     const dbCustomerData = Customer.create({
-
       first_name: req.body.firstName,
       last_name: req.body.lastName,
-
 
       email: req.body.email,
       password: req.body.password,
     });
-    console.log(dbCustomerData);
+    //console.log(dbCustomerData);
     // Save session with logged in variable
     req.session.save(() => {
       req.session.loggedIn = true;
@@ -171,7 +149,6 @@ router.get("/homepage", async (req, res) => {
     res.status(500).json(err);
   }
 });
-  
 
 module.exports = router;
 // Logout

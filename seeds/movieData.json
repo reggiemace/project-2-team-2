@@ -34,12 +34,6 @@
         "total_seats": 50,
         "selected_seats": 0,
         "filename":  "rush-hour.jpg" 
-    },
-    {
-        "movie_name": "Rush Hour",
-        "show_day": "2021-10-18",
-        "total_seats": 50,
-        "selected_seats": 0,
-        "filename":  "rush-hour.jpg" 
     }
+   
 ]
