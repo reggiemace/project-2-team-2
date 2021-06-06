@@ -40,6 +40,3 @@ const reservationFormHandler = async (event) => {
 document
   .querySelector("#reserved")
   .addEventListener("submit", reservationFormHandler);
-
-
-  

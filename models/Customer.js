@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 
 class Customer extends Model {
   checkPassword(loginPw) {
@@ -9,8 +9,13 @@ class Customer extends Model {
 }
 
 Customer.init(
-  
   {
+    customer_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -18,24 +23,33 @@ Customer.init(
     last_name: {
       type: DataTypes.STRING,
     },
-
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      defaultValue: DataTypes.STRING,
+      validate: {
+        isEmail: true,
+      },
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: [8],
+      },
     },
-    // movie_id: {
-    //   type: DataTypes.INTEGER, autoIncrement: true,
-    //   primaryKey: true,
-    //   references: {
-    //     model: "movie",
-    //     key: "id",
-    //   },
-    // },
+    number_seats: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    movie_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "movie",
+        key: "movie_id",
+      },
+    },
   },
   {
     hooks: {
@@ -44,7 +58,10 @@ Customer.init(
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
         return updatedUserData;
       },
     },
@@ -55,7 +72,4 @@ Customer.init(
     modelName: "customer",
   }
 );
-module.exports = Customer
-
-
-
+module.exports = Customer;
