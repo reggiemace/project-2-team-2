@@ -3,7 +3,7 @@
     "first_name": "Aiden",
     "last_name": "Radinksky",
     "email": "asradinsky@gmail.com",
-    "password": "pass123",
+    "password": "pass1234",
     "number_seats": 0,
     "movie_id": null
   },
@@ -11,7 +11,7 @@
     "first_name": "Iris",
     "last_name": "Valle",
     "email": "iris.valle.design@gmail.com",
-    "password": "pass1234",
+    "password": "pass1235",
     "number_seats": 0,
     "movie_id": null
   },
@@ -19,7 +19,7 @@
     "first_name": "Joey",
     "last_name": "Kouneski",
     "email": "joeykouneski@gmail.com",
-    "password": "pass12345",
+    "password": "pass1236",
     "number_seats": 0,
     "movie_id": null
   },
@@ -27,7 +27,7 @@
     "first_name": "Reggie",
     "last_name": "Mace",
     "email": "reginaldmace36@gmail.com",
-    "password": "pass123456",
+    "password": "pass1237",
     "number_seats": 0,
     "movie_id": null
   }

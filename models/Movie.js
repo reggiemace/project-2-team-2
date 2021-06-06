@@ -28,13 +28,7 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // customer_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "customer",
-    //     key: "customer_id",
-    //   },
-    // },
+   
   },
   {
     sequelize,

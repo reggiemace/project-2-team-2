@@ -1,10 +1,15 @@
+{{!-- {{#each dbMovies as |movie|}}
+{{> -details}}
+{{/each}} --}}
+
 <div class="jumbotron" style="overflow:auto;">
   <h1 class="display-4">Confirmation</h1>
   <p class="lead">Your reservation has been confirmed. We hope you enjoy the
     movie.</p>
-  <hr class="my-4" />
-    <h4 class="leftAlign">{{movie.movie_name}}</h4>
-    <h5 class="leftAlign">{{movie.show_time}}</h5>
+  {{!-- <hr class="my-4" />
+  <img src="/images/{{jaws.filename}}" width="100%" height="50%" />
+    <h4 class="leftAlign">{{jaws.movie_name}}</h4>
+    <h5 class="leftAlign">{{jaws.total_seats}}</h5>
     <h5 class="leftAlign">7:00 PM</h5>
-    <h5 class="leftAlign">{{movie.selected_seats}}</h5>
+    <h5 class="leftAlign">{{jaws.selected_seats}}</h5> --}}
 </div>

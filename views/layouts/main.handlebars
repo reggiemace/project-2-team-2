@@ -23,7 +23,9 @@
 
   <body>
     <nav class="navbar">
-      <span class="navbar-text"><a href="/">Movies</a></span>
+      <span class="navbar-text"><a
+          href="/api/customer/homepage"
+        >Movies</a></span>
       {{! If the user is logged in show logout }}
       {{#if loggedIn}}
         <button
@@ -37,7 +39,7 @@
           id="login"
           class="btn btn-outline-info"
           type="button"
-        >Login</button>
+        >Logout</button>
       {{/if}}
     </nav>
 
