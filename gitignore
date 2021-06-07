@@ -104,5 +104,4 @@ dist
 .tern-port
 
 .DS_Store
-
-project-2-team-2/package.json
+node_modules
