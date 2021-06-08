@@ -58,7 +58,7 @@ Customer.init(
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(
+        updatedUserData.password = await bcryptjs.hash(
           updatedUserData.password,
           10
         );
