@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/reggiemace/project-2-team-2.git"
   },
-  "author": "Iris Valle, Joey Kouneski, Aidan, Radinsky, Reggie Mace",
+  "author": "Iris Valle, Joey Kouneski, Aidan Radinsky, Reggie Mace",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/reggiemace/project-2-team-2/issues"
@@ -29,8 +29,5 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
   }
 }
