@@ -4,13 +4,12 @@ const router = require("express").Router();
 // Import the model
 const { Customer, Movie } = require("../../../models");
 
-
 router.get("/login", async (req, res) => {
   res.render("login");
 });
 router.get("/confirmation", async (req, res) => {
   try {
-       const movieData = await Movie.findAll({});
+    const movieData = await Movie.findAll({});
     //console.log(movieData);
 
     const dbMovies = movieData.map((movie) => movie.get({ plain: true }));
@@ -53,7 +52,6 @@ router.get("/signup", async (req, res) => {
 router.get("/seatReservation", async (req, res) => {
   res.render("seatReservation");
 });
-
 
 //Create
 router.post("/", async (req, res) => {
